@@ -14,9 +14,7 @@ weatherForm.addEventListener('submit', e => {
   const location = search.value;
   try {
     messageOne.textContent = 'Loading...';
-    const data = getData(
-      `http://localhost:3000/weather?address=${location}`
-    ).then(data => {
+    const data = getData(`/weather?address=${location}`).then(data => {
       if (data.error) {
         messageOne.textContent = data.error;
       } else {
