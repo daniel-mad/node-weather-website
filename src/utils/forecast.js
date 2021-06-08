@@ -11,7 +11,7 @@ const forecast = (latitude, longtitude, cb) => {
     } else {
       cb(
         undefined,
-        `${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degress out. Humidity is ${body.current.humidity}.`
+        `${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. It feels like ${body.current.feelslike} degress out. Humidity is ${body.current.humidity}%.`
       );
     }
   });
